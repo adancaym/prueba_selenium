@@ -26,9 +26,7 @@ class TodoIst():
                     '#agenda_view > div > div.section > div > ul')
                 task_in_list = lista.find_elements_by_css_selector('li:not(:last-child)')
                 array_booleans_task_saved = self.get_array_booleans_task_saved(task_in_list)
-                print(array_booleans_task_saved)
                 is_all_saved = self.reduce_array_of_booleans(array_booleans_task_saved)
-                print(is_all_saved)
                 if is_all_saved: break
         except:
             print('Error en espera a guardado')
